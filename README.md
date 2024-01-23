@@ -1,10 +1,18 @@
 # tp-git-a-deux
-première modifiquation !!
 
-nouvelle modifiquation !
+coucou c'est bob!
+vivent les crêpes.
 
-modifiquation après mearg ! je vais essayer de merge à nouveau !!!!!!!
+première modification !!
 
-derrnière modifiquation avant le merge !!!!!
+nouvelle modification !
+
+modification après mearg ! je vais essayer de merge à nouveau !!!!!!!
+
+derrnière modification avant le merge !!!!!
 
 la pull request est créé ! maintenant je vais essayer de merge
+
+
+
+
