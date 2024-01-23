@@ -5,7 +5,7 @@ namespace src
         private List<Person> people;
 
         public string People { get => people;}
-        public PeopleContainer(_people)
+        public PeopleContainer(List<Person> _people)
         {
             this.people=people;
         }
