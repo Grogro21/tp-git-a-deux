@@ -4,7 +4,7 @@ namespace src
     {
         private List<Person> people;
 
-        public string People { get => people;}
+        public List<Person> People { get => people;}
         public PeopleContainer(List<Person> _people)
         {
             this.people=people;
@@ -15,13 +15,13 @@ namespace src
 
     interface IPersonContainer
     {
-        public List<Person> SortByLastName(peoples)
+        public List<Person> SortByLastName(List<Person>  peoples)
          {
-            return(peoples.OrderBy(p=>p.Prenom));
+            return(peoples.OrderBy(p=>p.Prenom).ToList());
          }
-        List<Person> SortByFirstName(peoples)
+        List<Person> SortByFirstName(List<Person>  peoples)
         {
-            return(peoples.OrderBy(p=>p.Nom));
+            return(peoples.OrderBy(p=>p.Nom).ToList());
         }
     }
 }
