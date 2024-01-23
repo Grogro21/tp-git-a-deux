@@ -5,4 +5,4 @@ Console.WriteLine("saisir prenom");
 string prenom=Console.ReadLine() ;
 Person myPerson= new Person(nom,prenom);
 Console.WriteLine(nom+" "+prenom)
-
+PersonneContainer myContainer= new PersonContainer
