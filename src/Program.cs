@@ -10,4 +10,11 @@ Console.WriteLine(nom+" "+prenom);
 List<Person>  peoples = new List<Person>();
 peoples.Add(myPerson);
 src.PeopleContainer myContainer = new PeopleContainer(peoples);
+//Inserer le code pour ajouter des personnes ici
+//
+if (!myContainer.alreadyContains(newperson))
+{
+    myContainer.People.Add(newperson);
+}
+
 
