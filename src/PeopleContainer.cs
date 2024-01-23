@@ -1,6 +1,6 @@
 namespace src
 {
-    public class PeopleContainer : IPersonContainer
+    public class PeopleContainer
     {
         private List<Person> people;
 
@@ -15,13 +15,13 @@ namespace src
 
     interface IPersonContainer
     {
-        public List<Person> SortByLastName()
+        public List<Person> SortByLastName(peoples)
          {
-            return(this.People.OrderBy(p=>p.Prenom));
+            return(peoples.OrderBy(p=>p.Prenom));
          }
-        List<Person> SortByFirstName()
+        List<Person> SortByFirstName(peoples)
         {
-            return(this.People.OrderBy(p=>p.Nom));
+            return(peoples.OrderBy(p=>p.Nom));
         }
     }
 }
