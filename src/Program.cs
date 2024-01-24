@@ -16,4 +16,6 @@ if (!myContainer.alreadyContains(myPerson))
     myContainer.People.Add(myPerson);
 }
 
+src.SerializePeopleContainerToJson toConvert = new SerializePeopleContainerToJson(myContainer);
+string JsonFile = toConvert.SerializeMethod();
 
