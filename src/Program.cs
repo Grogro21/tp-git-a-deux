@@ -10,6 +10,7 @@ do
 {
     Console.WriteLine("saisir nom ou saisissez la lettre q pour quitter le programme :");
     nom = Console.ReadLine();
+    if(string nom != "q"){ 
     Console.WriteLine("Veuillez ajouter un prénom");
     prenom = Console.ReadLine();
     src.Person myPerson = new src.Person(nom, prenom);
@@ -18,6 +19,7 @@ do
 {
     myContainer.People.Add(myPerson);
 }
+    }
 
 } while (!nom.SequenceEqual("q"));
 if (myContainer.People.Count > 0)
