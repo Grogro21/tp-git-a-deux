@@ -17,6 +17,10 @@ if (!myContainer.alreadyContains(myPerson))
     myContainer.People.Add(myPerson);
 }
 
+src.PeopleContainer listeTri = myContainer.SortByFirstName();
 src.SerializePeopleContainerToJson toConvert = new SerializePeopleContainerToJson(myContainer);
 string JsonFile = toConvert.SerializeMethod();
+string filename = "savefile.json";
+File.WriteAllText(filename, JsonFile);
+Console.WriteLine(File.ReadAllText(filename));
 
