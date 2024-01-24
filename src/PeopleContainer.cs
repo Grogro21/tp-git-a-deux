@@ -4,13 +4,21 @@ namespace src
     {
         private List<Person> people;
 
-        public List<Person> People { get => people;}
+        public List<Person> People { get => people; set => people = value; }
+
         public PeopleContainer(List<Person> _people)
         {
             this.people=people;
         }
 
-        
+        public bool alreadyContains(Person person)
+        {
+            if (people.Contains(person))
+            {
+                return false;
+            }
+            return true;
+        }
     }
 
     interface IPersonContainer
