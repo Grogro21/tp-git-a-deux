@@ -10,7 +10,7 @@ do
 {
     Console.WriteLine("saisir nom ou saisissez la lettre q pour quitter le programme :");
     nom = Console.ReadLine();
-    if(nom.SequenceEqual("q"))
+    if(!nom.SequenceEqual("q"))
         { 
         Console.WriteLine("Veuillez ajouter un prénom");
         prenom = Console.ReadLine();
