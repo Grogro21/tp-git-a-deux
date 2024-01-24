@@ -20,10 +20,12 @@ do
 }
 
 } while (!nom.SequenceEqual("q"));
-src.PeopleContainer listeTri = new PeopleContainer(myContainer.SortByFirstName());
-src.SerializePeopleContainerToJson toConvert = new SerializePeopleContainerToJson(listeTri);
-string JsonFile = toConvert.SerializeMethod();
-string filename = "savefile.json";
-File.WriteAllText(filename, JsonFile);
-Console.WriteLine(File.ReadAllText(filename));
-
+if (myContainer.People.Count > 0)
+{
+    src.PeopleContainer listeTri = new PeopleContainer(myContainer.SortByFirstName());
+    src.SerializePeopleContainerToJson toConvert = new SerializePeopleContainerToJson(listeTri);
+    string JsonFile = toConvert.SerializeMethod();
+    string filename = "savefile.json";
+    File.WriteAllText(filename, JsonFile);
+    Console.WriteLine(File.ReadAllText(filename));
+}
