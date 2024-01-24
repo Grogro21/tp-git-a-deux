@@ -20,8 +20,8 @@ do
 }
 
 } while (!nom.SequenceEqual("q"));
-src.PeopleContainer listeTri = myContainer.SortByFirstName();
-src.SerializePeopleContainerToJson toConvert = new SerializePeopleContainerToJson(myContainer);
+src.PeopleContainer listeTri = new PeopleContainer(myContainer.SortByFirstName());
+src.SerializePeopleContainerToJson toConvert = new SerializePeopleContainerToJson(listeTri);
 string JsonFile = toConvert.SerializeMethod();
 string filename = "savefile.json";
 File.WriteAllText(filename, JsonFile);
