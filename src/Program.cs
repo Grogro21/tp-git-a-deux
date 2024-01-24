@@ -1,7 +1,9 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using System.Text.Json;
 using src;
 using System.ComponentModel.DataAnnotations.Schema;
 List<Person> peoples = new List<Person>();
+
 
 do
 {
@@ -14,6 +16,17 @@ do
     peoples.Add(myPerson);
     src.PeopleContainer myContainer = new PeopleContainer(peoples);
     myContainer.People.Add(myPerson);
-} while (string nom != "q");
+    if (!myContainer.alreadyContains(myPerson))
+{
+    myContainer.People.Add(myPerson);
+}
 
+} while (string nom != "q");
+src.PeopleContainer listeTri = myContainer.SortByFirstName();
+src.SerializePeopleContainerToJson toConvert = new SerializePeopleContainerToJson(myContainer);
+string JsonFile = toConvert.SerializeMethod();
+string filename = "savefile.json";
+File.WriteAllText(filename, JsonFile);
+Console.WriteLine(File.ReadAllText(filename));
 List<Person> peoples = new List<Person>();
+
