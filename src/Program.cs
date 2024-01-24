@@ -16,7 +16,12 @@ do
         prenom = Console.ReadLine();
         src.Person myPerson = new src.Person(nom, prenom);
         Console.WriteLine(nom + " " + prenom);
-        if (!myContainer.alreadyContains(myPerson))
+        if (myContainer.People==null)
+        {
+            myContainer.People= new List<Person>();
+            myContainer.People.Add(myPerson); 
+        }
+        else if (!myContainer.alreadyContains(myPerson))
           {
           myContainer.People.Add(myPerson);
           }
@@ -32,4 +37,6 @@ if (myContainer.People.Count > 0)
     string filename = "savefile.json";
     File.WriteAllText(filename, JsonFile);
     Console.WriteLine(File.ReadAllText(filename));
+    
+
 }

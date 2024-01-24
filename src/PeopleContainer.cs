@@ -15,11 +15,15 @@ namespace src
 
         public bool alreadyContains(Person person)
         {
-            if (people.Contains(person))
+            if (people==null)
             {
                 return false;
             }
-            return true;
+            else if (people.Contains(person))
+            {
+                return true;
+            }
+            return false;
         }
         public List<Person> SortByLastName()
         {
