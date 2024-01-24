@@ -1,18 +1,8 @@
 # tp-git-a-deux
 
-coucou c'est bob!
-vivent les crêpes.
-
-première modification !!
-
-nouvelle modification !
-
-modification après mearg ! je vais essayer de merge à nouveau !!!!!!!
-
-derrnière modification avant le merge !!!!!
-
-la pull request est créé ! maintenant je vais essayer de merge
-
+Coucou c'est bob!
+Ce programme va vous demander de rentrer les noms et prénoms de plusieurs personnes. 
+Il les transformera ensuite en fichier Json qui contient les données de toutes ces personnes.
 
 
 
