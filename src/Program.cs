@@ -31,8 +31,8 @@ do
 while (!nom.SequenceEqual("q"));
 if (myContainer.People.Count > 0)
 {
-    src.SerializePeopleContainerToJson toConvert1 = new SerializePeopleContainerToJson(myContainer);
     myContainer.People = myContainer.SortByFirstName();
+    src.SerializePeopleContainerToJson toConvert1 = new SerializePeopleContainerToJson(myContainer);
     string JsonFile = toConvert1.SerializeMethod();
     string filename = "savefile.json";
     File.WriteAllText(filename, JsonFile);
