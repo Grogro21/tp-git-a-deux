@@ -1,3 +1,5 @@
+using System.Text.Json;
+
 namespace src
 {
     public class PeopleContainer : IPersonContainer
@@ -33,5 +35,19 @@ namespace src
     {
         List<Person> SortByLastName();
         List<Person> SortByFirstName();
+    }
+
+    public class SerializePeopleContainerToJson
+    {
+        private PeopleContainer people;
+        public SerializePeopleContainerToJson(PeopleContainer _people)
+        {
+            this.people = _people;
+        }
+
+        public string SerializeMethod()
+        {
+            return JsonSerializer.Serialize(this.people);
+        }
     }
 }
