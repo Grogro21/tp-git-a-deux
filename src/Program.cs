@@ -39,11 +39,10 @@ do
             }
         }
     }
-
 } 
 while (!nom.SequenceEqual("q"));
 
-if (myContainer.People.Count > 0)
+if (myContainer.People != null)
     {
     myContainer.People = myContainer.SortByFirstName();
     src.SerializePeopleContainerToJson toConvert1 = new SerializePeopleContainerToJson(myContainer);
@@ -51,6 +50,4 @@ if (myContainer.People.Count > 0)
     string filename = "savefile.json";
     File.WriteAllText(filename, JsonFile);
     Console.WriteLine(File.ReadAllText(filename));
-    
-
     }
