@@ -6,7 +6,7 @@ List<Person> peoples = new List<Person>();
 string nom;
 string prenom;
 bool isHere;
-src.PeopleContainer myContainer = new PeopleContainer(peoples);
+PeopleContainer myContainer = new PeopleContainer(peoples);
 do
 {
     Console.WriteLine("saisir nom ou saisissez la lettre q pour quitter le programme :");
@@ -15,7 +15,7 @@ do
     {
         Console.WriteLine("Veuillez ajouter un prénom");
         prenom = Console.ReadLine();
-        src.Person myPerson = new src.Person(nom, prenom);
+        Person myPerson = new src.Person(nom, prenom);
         Console.WriteLine(nom + " " + prenom);
         if (myContainer.People == null) //si c'est la première personne, rien à comparer, on l'ajoute au container
         {
@@ -45,7 +45,7 @@ while (!nom.SequenceEqual("q"));
 if (myContainer.People != null) //obligé de vérifier que le container n'est pas vide sinon ça va crash
     {
     myContainer.People = myContainer.SortByFirstName(); //tri par nom
-    src.SerializePeopleContainerToJson toConvert1 = new SerializePeopleContainerToJson(myContainer);
+    SerializePeopleContainerToJson toConvert1 = new SerializePeopleContainerToJson(myContainer);
     string JsonFile = toConvert1.SerializeMethod(); 
     string filename = "savefile.json";
     File.WriteAllText(filename, JsonFile); //crée le fichier savefile.json et écrit dedans
